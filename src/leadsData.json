@@ -1,0 +1,75 @@
+
+[
+    {
+      "id": "1",
+      "name": "יוסי כהן",
+      "email": "yossi@example.com",
+      "phone": "052-1234567",
+      "utm_source": "facebook",
+      "utm_campaign": "spring_sale",
+      "createdAt": "2025-08-18T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "מירב לוי",
+      "email": "mirav@test.co.il",
+      "phone": "050-9876543",
+      "utm_source": "google",
+      "utm_campaign": "summer_promo",
+      "createdAt": "2025-08-17T15:30:00Z"
+    },
+    {
+      "id": "3",
+      "name": "אלי חכם",
+      "email": "eli@smart.com",
+      "phone": "054-1112233",
+      "utm_source": "instagram",
+      "utm_campaign": "influencer_collab",
+      "createdAt": "2025-08-17T18:00:00Z"
+    },
+    {
+      "id": "4",
+      "name": "דנה מזרחי",
+      "email": "dana@mail.net",
+      "phone": "052-5556677",
+      "utm_source": "google",
+      "utm_campaign": "summer_promo",
+      "createdAt": "2025-08-16T09:00:00Z"
+    },
+    {
+      "id": "5",
+      "name": "איתי שקד",
+      "email": "itay@shaked.biz",
+      "phone": "053-4445566",
+      "utm_source": "facebook",
+      "utm_campaign": "spring_sale",
+      "createdAt": "2025-08-15T12:00:00Z"
+    },
+    {
+      "id": "6",
+      "name": "רונית כהן",
+      "email": "ronit@cohen.com",
+      "phone": "054-1111222",
+      "utm_source": "tiktok",
+      "utm_campaign": "viral_challenge",
+      "createdAt": "2025-08-15T11:00:00Z"
+    },
+    {
+      "id": "7",
+      "name": "איתן לוי",
+      "email": "eitan@levy.com",
+      "phone": "052-3334455",
+      "utm_source": "direct",
+      "utm_campaign": "direct_traffic",
+      "createdAt": "2025-08-14T08:00:00Z"
+    },
+    {
+      "id": "8",
+      "name": "יעל אברהם",
+      "email": "yael@abra.com",
+      "phone": "053-9988776",
+      "utm_source": "facebook",
+      "utm_campaign": "spring_sale",
+      "createdAt": "2025-08-13T16:00:00Z"
+    }
+  ]
