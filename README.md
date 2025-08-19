@@ -95,6 +95,65 @@ my-leads-app/
 
 ממשק למעקב אחרי קמפיינים ספציפיים.
 
+
+
+הטמעת טופס לידים בקמפיינים
+
+ניתן להטמיע את הקוד הבא בכל טופס בקמפיין פרסומי כדי לשלוח לידים ישירות למערכת ולעקוב אחרי מקורם (פייסבוק, גוגל, אינסטגרם, יוטיוב ועוד):
+
+<form id="leadForm">
+  <input type="text" name="name" placeholder="שם מלא" required />
+  <input type="email" name="email" placeholder="אימייל" required />
+  <input type="tel" name="phone" placeholder="טלפון" />
+  <button type="submit">שלח</button>
+</form>
+
+<script>
+  const form = document.getElementById('leadForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      url: window.location.href
+    };
+
+    try {
+      const response = await fetch('https://progect-lids.onrender.com/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert('הליד נשלח בהצלחה!');
+        form.reset();
+      } else {
+        alert('שגיאה בשליחת הליד: ' + result.message);
+      }
+    } catch (err) {
+      console.error(err);
+      alert('שגיאה בשרת. נסה שוב.');
+    }
+  });
+</script>
+
+יתרונות השיטה
+
+מזהה את מקור הליד לפי UTM או פרמטרים כמו fbclid, gclid, ytclid.
+
+שולח את כל הנתונים לשרת המרכזי ומאפשר סטטיסטיקות וגרפים בזמן אמת.
+
+מאפשר אופטימיזציה של תקציב הפרסום על בסיס ביצועי הקמפיינים.
+
+
+
 📞 קשר
 
 מפתח: אלימלך שיינברגר
