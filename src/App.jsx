@@ -13,12 +13,13 @@ function App() {
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchLeads = async () => {
     setLoading(true); 
     setError(null); 
     try {
-      const response = await fetch('http://localhost:5000/api/leads');
+      const response = await fetch(`${API_URL}/api/leads`);
       
       
       if (!response.ok) {
